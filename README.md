@@ -1,4 +1,4 @@
-# React Native Snackbar
+# React Native Snackbar(This Project is fork of https://github.com/cooperka/react-native-snackbar)
 
 [![Build status](https://travis-ci.org/cooperka/react-native-snackbar.svg?branch=master)](https://travis-ci.org/cooperka/react-native-snackbar)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-snackbar.svg)](https://www.npmjs.com/package/react-native-snackbar)
