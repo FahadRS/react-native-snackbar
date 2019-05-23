@@ -5,9 +5,10 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.4.0'
     }
 }
 
@@ -17,11 +18,11 @@ apply plugin: "com.android.library"
 // https://github.com/facebook/react-native/blob/v0.56.0/local-cli/templates/HelloWorld/android/build.gradle
 def _ext = rootProject.ext
 def _reactNativeVersion = _ext.has('reactNative') ? _ext.reactNative : '+'
-def _compileSdkVersion = _ext.has('compileSdkVersion') ? _ext.compileSdkVersion : 26
-def _buildToolsVersion = _ext.has('buildToolsVersion') ? _ext.buildToolsVersion : '26.0.3'
-def _supportLibVersion = _ext.has('supportLibVersion') ? _ext.supportLibVersion : '26.1.0'
-def _minSdkVersion = _ext.has('minSdkVersion') ? _ext.minSdkVersion : 16
-def _targetSdkVersion = _ext.has('targetSdkVersion') ? _ext.targetSdkVersion : 26
+def _compileSdkVersion = _ext.has('compileSdkVersion') ? _ext.compileSdkVersion : 28
+def _buildToolsVersion = _ext.has('buildToolsVersion') ? _ext.buildToolsVersion : '28.0.3'
+def _supportLibVersion = _ext.has('supportLibVersion') ? _ext.supportLibVersion : '28.0.0'
+def _minSdkVersion = _ext.has('minSdkVersion') ? _ext.minSdkVersion : 18
+def _targetSdkVersion = _ext.has('targetSdkVersion') ? _ext.targetSdkVersion : 28
 
 android {
     compileSdkVersion _compileSdkVersion
@@ -50,9 +51,9 @@ repositories {
 }
 
 dependencies {
-    compile "com.facebook.react:react-native:${_reactNativeVersion}"
+    implementation  "com.facebook.react:react-native:${_reactNativeVersion}"
 
-    compile "com.android.support:appcompat-v7:${_supportLibVersion}"
-    compile "com.android.support:support-v4:${_supportLibVersion}"
-    compile "com.android.support:design:${_supportLibVersion}"
+    implementation  "com.android.support:appcompat-v7:${_supportLibVersion}"
+    implementation  "com.android.support:support-v4:${_supportLibVersion}"
+    implementation  "com.android.support:design:${_supportLibVersion}"
 }
